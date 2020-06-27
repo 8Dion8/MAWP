@@ -1,6 +1,7 @@
 #Ver 0.1
- from time import sleep
- def buildsquarebracemap(code):
+from time import sleep
+def buildsquarebracemap(code):
+    
    temp_bracestack, bracemap = [], {}
    for position, command in enumerate(code):
        if command == "[": temp_bracestack.append(position)
@@ -9,7 +10,7 @@
            bracemap[start] = position
            bracemap[position] = start
    return bracemap
- def buildcurlybracemap(code):
+def buildcurlybracemap(code):
    temp_bracestack, bracemap = [], {}
    for position, command in enumerate(code):
        if command == "(": temp_bracestack.append(position)
@@ -18,7 +19,7 @@
            bracemap[start] = position
            bracemap[position] = start
    return bracemap
- def buildlongcondmap(code):
+def buildlongcondmap(code):
    temp_bracestack, bracemap = [], {}
    for position, command in enumerate(code):
        if command == "<": temp_bracestack.append(position)
@@ -27,7 +28,7 @@
            bracemap[start] = position
            bracemap[position] = start
    return bracemap
- def run_mawp(code,input_,debug=False, delay=0.1):
+def run_mawp(code,input_,debug=False, delay=0.1):
    formatted_input = list(input_)
    pos = 0
    stack = [1]
