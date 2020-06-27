@@ -45,8 +45,6 @@ MAWP 0.1 introduces several new features, and changes a couple old ones:
  
  <         long conditional. If top of stack doesn't equal to 0, jumps to its >
  
- >         end of long conditional
- 
  A         now gives the absolute value of the difference
  
  |         now pushes whole input byte by byte, not only the first one
