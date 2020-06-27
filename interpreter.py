@@ -1,7 +1,6 @@
 #Ver 0.1
 from time import sleep
 def buildsquarebracemap(code):
-    
    temp_bracestack, bracemap = [], {}
    for position, command in enumerate(code):
        if command == "[": temp_bracestack.append(position)
@@ -71,11 +70,11 @@ def run_mawp(code,input_,debug=False, delay=0.1):
        elif char == ':':
            top = int(stack[-1])
            stack.pop(-1)
-           print(str(top),end=)
+           print(str(top),end='')
        elif char == ';':
            top = int(stack[-1])
            stack.pop(-1)
-           print(str(chr(top)),end=)
+           print(str(chr(top)),end='')
        elif char == '.':
            return 0
        elif char == ']':
