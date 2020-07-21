@@ -1,7 +1,7 @@
 body {
     font-family: monospace;
     background-color: black;
-    max-width: 75em;
+    text-align: center;
 }
 h1, div, p {
     color: white;
@@ -16,20 +16,43 @@ h1, div, p {
     background-color: red;
     color: black;
 }
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
+#MAWP {
+    height: 30ch;
+    width: 85ch;
+    padding: 5px 10px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-#code-output {
     border: red;
     border-radius: 4px;
     border-style: double;
-    max-width: 45em;
-    height: 30ch;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
     
+}
+#input {
+    height: 5ch;
+    width: 85ch;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+#code-output {
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 45em;
+    height: 30ch;
+    overflow: scroll;
+    text-align: center;
 }
