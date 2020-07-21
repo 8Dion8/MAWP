@@ -1,7 +1,7 @@
 body {
     font-family: monospace;
     background-color: black;
-
+    max-width: 75em;
 }
 h1, div, p {
     color: white;
@@ -29,6 +29,7 @@ input[type=text], select {
     border: red;
     border-radius: 4px;
     border-style: double;
-    max-width: 100ch;
+    max-width: 45em;
     height: 30ch;
+    
 }
