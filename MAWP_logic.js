@@ -26,6 +26,7 @@ function run_code(){
     var sec
     var numbers = ['0','1','2','3','4','5','6','7','8','9']
     var output = ''
+    var squarebracemap = buildsquarebracemap(code)
     while (true) {
         char = code.charAt(pos)
         console.log(char)
@@ -70,6 +71,16 @@ function run_code(){
         else if (char == ';') {
             var temp = stack.pop()
             output += String.fromCharCode(temp)
+        }
+        else if (char == '[') {
+            if (stack[-1] != 0) {
+                pos = squarebracemap[pos]
+            }
+        }
+        else if (char == ']') {
+            if (stack[-1] == 0) {
+                pos = squarebracemap[pos]
+            }
         }
         pos += 1
         console.log(stack)
