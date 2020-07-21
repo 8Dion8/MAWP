@@ -93,7 +93,7 @@ def run_mawp(code,input_,debug=False, delay=0.1):
            if stack[-1] != 0:
                pos += 1
        elif char == '|':
-           stack.extend(ord(x) for x in formatted_input)
+           stack.extend([ord(x) for x in formatted_input])
        elif char == '~':
            stack = list(reversed(stack))
        elif char == '<':

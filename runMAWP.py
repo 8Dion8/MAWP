@@ -1,6 +1,6 @@
 from interpreter import run_mawp
 
-code = "[!:1M!99WA?.%52W;]"
+code = "[!:1M!9A?.%]"
 input_ = ""
 DEBUG = False
 DELAY = 0

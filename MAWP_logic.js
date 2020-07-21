@@ -16,7 +16,6 @@ function buildsquarebracemap(code){
 function run_code(){
     var code = document.getElementById('MAWP').value
     document.getElementById('code-output').innerHTML = ''
-    document.getElementById('code-output').innerHTML = code
     console.log(code)
     console.log(buildsquarebracemap(code))
     var char = ''
@@ -26,8 +25,9 @@ function run_code(){
     var sec
     var numbers = ['0','1','2','3','4','5','6','7','8','9']
     var output = ''
-    var squarebracemap = buildsquarebracemap(code)
+    const squarebracemap = buildsquarebracemap(code)
     while (true) {
+        console.log(pos)
         char = code.charAt(pos)
         console.log(char)
         //console.log(typeof char)
@@ -59,6 +59,7 @@ function run_code(){
         }
         else if (char == '.') {
             document.getElementById('code-output').innerHTML = output
+            console.log(output)
             return 0
         }
         else if (char == '!') {
@@ -72,18 +73,29 @@ function run_code(){
             var temp = stack.pop()
             output += String.fromCharCode(temp)
         }
+        else if (char == '?') {
+            if (stack[stack.length - 1] != 0) {
+                ++pos
+            }
+        }
         else if (char == '[') {
-            if (stack[-1] != 0) {
+            if (stack[-1] == 0) {
+                console.log(squarebracemap,squarebracemap[pos])
                 pos = squarebracemap[pos]
             }
         }
         else if (char == ']') {
-            if (stack[-1] == 0) {
+            if (stack[-1] != 0) {
+                console.log(squarebracemap,squarebracemap[pos])
                 pos = squarebracemap[pos]
             }
         }
         pos += 1
         console.log(stack)
+        if (output.length > 2048*8) {
+            document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 16kb and was truncated."
+            return 0
+        }
         if (pos == code.length) {
             return 1
         }
