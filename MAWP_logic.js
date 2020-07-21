@@ -1,8 +1,24 @@
+function buildsquarebracemap(code){
+    temp_bracestack = []
+    bracemap = {}
+    code = code.split("")
+    for (const [position,command] of code.entries()) {
+        if (command === "["){temp_bracestack.push(position)}
+        if (command === "]"){
+            start = temp_bracestack.pop()
+            bracemap[start] = position
+            bracemap[position] = start
+        }
+    }
+    return bracemap
+}
+
 function run_code(){
     var code = document.getElementById('MAWP').value
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('code-output').innerHTML = code
     console.log(code)
+    console.log(buildsquarebracemap(code))
     var char = ''
     var pos = 0
     var stack = [1]
