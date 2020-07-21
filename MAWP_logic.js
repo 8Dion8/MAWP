@@ -1,7 +1,7 @@
 function run_code(){
     var code = document.getElementById('MAWP').value
     document.getElementById('code-output').innerHTML = ''
-    //document.getElementById('code-output').innerHTML = code
+    document.getElementById('code-output').innerHTML = code
     console.log(code)
     var char = ''
     var pos = 0
@@ -14,7 +14,6 @@ function run_code(){
         char = code.charAt(pos)
         console.log(char)
         //console.log(typeof char)
-
         if (numbers.includes(char)) {
             stack.push(parseInt(char))
         }
