@@ -1,5 +1,7 @@
 # MAWP
 esolang wiki link: https://esolangs.org/wiki/MAWP
+
+# PLEASE OPEN ANY ISSUES AT [THIS](https://github.com/8Dion8/8Dion8.github.io) REPO
 <table>
             <tr>
                 <th>Symbol</th>
