@@ -97,10 +97,6 @@ esolang wiki link: https://esolangs.org/wiki/MAWP
                 <td>Pushes whole input byte by byte. If character is an integer, then push that integer. Else push a 0</td>
             </tr>
             <tr>
-                <td>Target</td>
-                <td>Description</td>
-            </tr>
-            <tr>
                 <td>/</td>
                 <td>Cycles stack clockwise</td>
             </tr>
